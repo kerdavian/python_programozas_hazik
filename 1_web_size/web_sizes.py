@@ -22,6 +22,7 @@ for i in range(len(sites) - 1):
     if sites[i]["size"] != sites_new[i]["size"]:
         diff = sites_new[i]["size"] - sites[i]["size"]
         change_rate = round(diff / sites_new[i]["size"] * 100, 2)
+
         changed.append(str(sites[i]["domain"] + " changed by " + str(change_rate) + "%")) if diff < 0 else changed.append(str(sites[i]["domain"] + " changed by " + "+" + str(change_rate) + "%")) 
 
     # 3. feladat
